@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- -------meta tags------- -->
+    <meta name="author" content="Subhani Sayyad"/>
+    <meta name="keywords" content="web development,front end developer,website development,backend developer,ui developer,web application development,freelance web developer,web design and development,front end web developer,freelance web designer,front end and back end" />
+    <meta name="description" content="Being a Versatile Designer and Web Developer with a strong foundation in web development and a passion for design, I specialize in creating tailored web experiences that enhance brands and tell unique stories. From web design and development to branding, I adapt to each client's needs, ensuring that my work elevates their vision.">
+
+    <!-- ------title----- -->
+    <title>Subhani Sayyad | MERN Stack Developer</title>
+
+     <!-- style link -->
+     <link rel="stylesheet" href="style.css"/>
+
+      <!-- fontawesome cdn links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <!-- -----whatsapp icon ---- -->
+    <div class="whatsapp">
+        <a href="https://wa.me/+919010611618" target="_blank" class="wtsap">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+      </div>
+
+      <!-- ------social Icons------ -->
+       <div class="social">
+        <div class="s-icons"><a href="" target="_blank"><i class="fa-brands fa-github"></i></a></div>
+        <div class="s-icons"><a href="" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></div>
+          <div class="s-icons"><a href="" target="_blank"><i class="fa-brands fa-dribbble"></i></a></div>
+       </div>
+
+    <div class="container">
+    <div class="navbar">
+      <nav class="nav-items">
+          <ul>
+              <li><a class="active" href="#home"><i class="fa-solid fa-house"></i></a></li>
+              <li><a href="#about"><i class="fa-solid fa-user"></i></a></li>
+              <li><a href="#projects"><i class="fa-solid fa-cart-shopping"></i></a></li>
+              <li><a href="#contact"><i class="fa-solid fa-address-book"></i></a></li>
+          </ul>
+      </nav>  
+    </div>
+    </div>
+
+
+    <section id="home" class="hero">
+     <div class="home-container">
+        <div class="hero-row">
+            <h3>hello!</h3>
+            <h3>i'm</h3>
+            <h2>subhani sayyad.</h2>
+            <p>An UX/UI Designer & MERN Stack Developer<br/>
+                from Hyderabad-INDIA.</p>
+        </div>
+     </div>
+    </section>
+
+    <section id="about">About</section>
+    <section id="projects">Projects</section>
+    <section id="contact">Contact</section>
+
+
+    <script>
+let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('.nav-items a'); 
+
+window.onscroll = () => {
+    sections.forEach(sec => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 150;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
+        if (top >= offset && top < offset + height) {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            document.querySelector('.nav-items a[href*="' + id + '"]').classList.add('active');
+        }
+    });
+};
+    </script>
+
+
+</body>
+</html>
