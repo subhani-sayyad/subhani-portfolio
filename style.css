@@ -45,7 +45,7 @@ body{
     font-weight: 700;
     border-radius: 5rem;
     border-right: none;
-    bottom:4rem;
+    bottom:1rem;
     font-size: 3.5rem;
     border:0;
     z-index: 99999;
@@ -81,7 +81,7 @@ body{
 /* -----social icon------- */
 .social{
     position: fixed;
-    top:40%;
+    top:35%;
     right:7rem;
     font-size: 2rem;
     z-index: 99999;
@@ -97,8 +97,7 @@ color:#000000;
     bottom: 0;
     display: flex;
     justify-content: center;
-    width: 100%;
-    
+    width: 100%;   
 }
 
 /* navbar */
@@ -122,7 +121,6 @@ nav ul{
     align-items: center;
     justify-content: space-around;
     padding: 0.8rem 3.8rem;
-   
 }
 nav ul li { 
     display: inline-block; 
@@ -136,7 +134,7 @@ nav ul li:not(:last-child){
 
 .nav-items a i {
     color: var(--clr-nav, #fff);
-    font-size: 2rem;
+    font-size: 2.5rem;
     transition: 0.5s;
 }
 
@@ -163,7 +161,7 @@ height: auto;
     margin: auto;
     align-items: flex-start;
     position: fixed;
-    left:25rem;
+    left:20rem;
     z-index: 99999;
     top:32%;
 }
@@ -179,17 +177,44 @@ height: auto;
 .home-container p{
     font-size: 1.8rem;
     color: var(--clr-secondary);
-    padding: 1rem 0;
+    padding-top: 1rem;
     line-height: 2.5rem;
     font-weight: 400;
 }
+.hero-col-2 button{
+    font-size: 2rem;
+    background-color: var(--clr-primary);
+    color:var(--clr-bg);
+    padding: 1.3rem 4rem;
+    border-radius: 20rem;
+    cursor: pointer;
+}
+
+section .about{
+    width: 100%;
+    height: auto;
+    
+    }
+    section .about .about-container{
+        max-width: 120rem;
+        margin: auto;
+        justify-content:right;
+        text-align: left;
+    }
+    .about .about-container h2{
+        font-size: 2rem;
+        color: var(--clr-primary);
+        padding: 0.8rem 0;
+    }
+
+
+
 
 section {
     min-height: 100vh;
     max-width: 120rem;
     display: flex;
     justify-content:right;
-    align-items: center;
     font-size: 100px;
     color: #000000;
     font-weight: 700;
@@ -198,7 +223,7 @@ section {
 
 
 /* media query */
-@media screen and (max-width:700px)  {
+@media screen and (max-width:800px)  {
     .social{
         display: none;
     }
@@ -208,5 +233,13 @@ section {
         align-items: center;
         justify-content: center;
         position: relative;
+    }
+    .navbar{
+        min-width: 40rem;
+        display: flex;
+        padding: 2rem;
+        background-color: var(--clr-primary);
+        justify-content: space-around;
+        border-radius: 1rem 1rem 0 0;
     }
 }
